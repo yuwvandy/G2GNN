@@ -1,7 +1,7 @@
 # G2GNN
 This repository is an official PyTorch(Geometric) implementation of G^2GNN in "Imbalanced Graph Classification via Graph-of-Graph Neural Networks"
 
-![](./image/framework_g2gnn.png)
+![](./img/framework_g2gnn.png)
 
 
 ## Requirements
