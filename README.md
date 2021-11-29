@@ -23,5 +23,5 @@ Note that the version of PyTorch and PyTorch Geometric should be compatible and 
 ```linux
 bash run.sh
 ```
-![](./image/table.png)
-![](./image/ablation.png)
+![](./image/table_GoG.png)
+![](./image/ablation_GoG.png)
