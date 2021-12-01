@@ -21,7 +21,7 @@ Note that the version of PyTorch and PyTorch Geometric should be compatible and 
 ## Run
 * To reproduce the performance comparison and the ablation study in the following Table and the Figure, run
 ```linux
-bash run.sh
+bash run_{dataset}.sh
 ```
 ![](./img/Table_GoG.png)
 ![](./img/ablation_GoG.png)
