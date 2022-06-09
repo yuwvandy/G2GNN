@@ -1,11 +1,6 @@
 <img src="https://render.githubusercontent.com/render/math?math=\text{G}^2\text{GNN}" style="width:200px;">
 This repository is an official PyTorch(Geometric) implementation of G^2GNN in "Imbalanced Graph Classification via Graph-of-Graph Neural Networks".
 
-**If you consider this paper and the code is helpful, please cite:**
-```linux
-Wang, Yu, et al. "Imbalanced Graph Classification via Graph-of-Graph Neural Networks." arXiv preprint arXiv:2112.00238 (2021).
-```
-
 
 
 The whole flowchart our model is visualized in the sequal.
