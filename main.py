@@ -23,7 +23,7 @@ from os import path
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--dataset', type=str, default='MUTAG')
-parser.add_argument('--runs', type=int, default=10)
+parser.add_argument('--runs', type=int, default=20)
 parser.add_argument('--imb_ratio', type=float, default=0.1)
 
 
