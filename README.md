@@ -36,15 +36,15 @@ pip install torch-spline-conv -f https://data.pyg.org/whl/torch-1.11.0+cu113.htm
 * [Neurips 2020] **GraphCL-Graph Contrastive Learning with Augmentations** [[paper]](https://arxiv.org/abs/2010.13902)
 
 ## Implemented strategies for handling imbalance issue in graph classification
-* [ICLR 2019] **GIN-How Powerful Are Graph Neural Networks?** [[paper]](https://arxiv.org/pdf/1810.00826.pdf)
-* [ICLR 2020] **InfoGraph-InfoGraph: Unsupervised and Semi-supervised Graph-Level Representation Learning via Mutual Information Maximization** [[paper]](https://arxiv.org/abs/1908.01000)
-* [Neurips 2020] **GraphCL-Graph Contrastive Learning with Augmentations** [[paper]](https://arxiv.org/abs/2010.13902)
+* [ICML 1997] **Upsampling: Addressing the curse of imbalanced training sets: one-sided selection** [[paper]](https://sci2s.ugr.es/keel/pdf/algorithm/congreso/kubat97addressing.pdf)
+* [IJCNN 2012] **Reweight: Sampling + reweighting: Boosting the performance of AdaBoost on imbalanced datasets** [[paper]](https://ieeexplore.ieee.org/document/6252738)
+* [JAIR 2002] **SMOTE: SMOTE: Synthetic Minority Over-sampling Technique** [[paper]](https://arxiv.org/pdf/1106.1813.pdf)
+* [CIKM 2022] **G2GNN: Imbalanced Graph Classification via Graph-of-Graph Neural Networks** [[paper]](https://dl.acm.org/doi/10.1145/3511808.3557356)
 
 
 ## Run
+Note that compared to the previous verion of this repository, we move the K-nearest neighbor search in topological space into the batch-processing process, which hence can be speed up due to parallel preparation. Furthermore, to solve the undeterministic issue, we replace the original [scatter-based message-passing/pooling](https://pytorch-scatter.readthedocs.io/en/latest/functions/scatter.html) with sparse-matrix multiplication-based message-passing and [segment_csr-based pooling](https://pytorch-scatter.readthedocs.io/en/latest/functions/segment_csr.html), see more details [[here]](https://pytorch-geometric.readthedocs.io/en/latest/notes/sparse_tensor.html)
 
-
-* To reproduce the performance comparison and the ablation study in the following Table and the Figure, run
 ```linux
 bash run_{dataset}.sh
 ```
