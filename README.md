@@ -40,6 +40,8 @@ pip install torch-spline-conv -f https://data.pyg.org/whl/torch-1.11.0+cu113.htm
 * [IJCNN 2012] **Reweight: Sampling + reweighting: Boosting the performance of AdaBoost on imbalanced datasets** [[paper]](https://ieeexplore.ieee.org/document/6252738)
 * [JAIR 2002] **SMOTE: SMOTE: Synthetic Minority Over-sampling Technique** [[paper]](https://arxiv.org/pdf/1106.1813.pdf)
 * [CIKM 2022] **G2GNN: Imbalanced Graph Classification via Graph-of-Graph Neural Networks** [[paper]](https://dl.acm.org/doi/10.1145/3511808.3557356)
+* [CIKM 2022] **Remove edges: Imbalanced Graph Classification via Graph-of-Graph Neural Networks** [[paper]](https://dl.acm.org/doi/10.1145/3511808.3557356)
+* [CIKM 2022] **Masking nodes: Imbalanced Graph Classification via Graph-of-Graph Neural Networks** [[paper]](https://dl.acm.org/doi/10.1145/3511808.3557356)
 
 
 ## Run
