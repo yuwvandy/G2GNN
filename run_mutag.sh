@@ -20,7 +20,7 @@ python main.py --dataset='MUTAG' --imb_ratio=0.1 --setting='smote' --num_train=5
 
 
 echo "--knn--"
-python main.py --dataset='MUTAG' --imb_ratio=0.1 --setting='knn' --num_train=50 --num_val=50 --epochs=1000 --weight_decay=0.05 --knn_layer=2 --knn_nei_num=3
+python main.py --dataset='MUTAG' --imb_ratio=0.1 --setting='knn' --num_train=50 --num_val=50 --epochs=1000 --weight_decay=0.05 --knn_layer=3 --knn_nei_num=2
 
 
 echo "--aug_drop_edge--"
