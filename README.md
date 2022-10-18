@@ -45,7 +45,7 @@ pip install torch-spline-conv -f https://data.pyg.org/whl/torch-1.11.0+cu113.htm
 
 
 ## Run
-Note that compared to the previous verion of this repository, we move the K-nearest neighbor search in topological space into the batch-processing process, which hence can be speed up due to parallel preparation. Furthermore, to solve the undeterministic issue, we replace the original [scatter-based message-passing/pooling](https://pytorch-scatter.readthedocs.io/en/latest/functions/scatter.html) with sparse-matrix multiplication-based message-passing and [segment_csr-based pooling](https://pytorch-scatter.readthedocs.io/en/latest/functions/segment_csr.html), see more details [[here]](https://pytorch-geometric.readthedocs.io/en/latest/notes/sparse_tensor.html)
+Note that compared to the previous verion of this repository, we move the K-nearest neighbor search in topological space into the batch-processing, which hence can be speed up due to parallel preparation. Furthermore, to solve the undeterministic issue, we replace the original [scatter-based message-passing/pooling](https://pytorch-scatter.readthedocs.io/en/latest/functions/scatter.html) with sparse-matrix multiplication-based message-passing and [segment_csr-based pooling](https://pytorch-scatter.readthedocs.io/en/latest/functions/segment_csr.html), see more details [[here]](https://pytorch-geometric.readthedocs.io/en/latest/notes/sparse_tensor.html)
 
 ```linux
 bash run_{dataset}.sh
