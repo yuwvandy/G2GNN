@@ -20,7 +20,7 @@ series = {CIKM '22}
 * torch-sparse 0.6.15
 * torch-cluster 1.6.0
 
-Note that the **version of the PyTorch Geometric/scatter/sparse/cluster used here is not the latest 2.1.0**, which can be intalled via pip as follows:
+Note that the **version of the PyTorch Geometric/scatter/sparse/cluster used here is not the very latest one**. The current used versions can be intalled via:
 ```
 pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
 pip install torch-geometric==2.0.4
