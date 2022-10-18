@@ -1,15 +1,25 @@
 <img src="https://render.githubusercontent.com/render/math?math=\text{G}^2\text{GNN}" style="width:200px;">
-This repository is an official PyTorch(Geometric) implementation of G^2GNN in "Imbalanced Graph Classification via Graph-of-Graph Neural Networks".
+This repository is an $1^{st}$ official PyTorch(Geometric) implementation of GNN-based machine learning models for handling imbalanced graph classification.
 
+See more details for the paper ['Imbalanced Graph Classification via Graph-of-Graph Neural Networks'](https://dl.acm.org/doi/10.1145/3511808.3557356)
 
+**If you use this code, please consider citing:**
+```linux
+@inproceedings{10.1145/3511808.3557356,
+author = {Wang, Yu and Zhao, Yuying and Shah, Neil and Derr, Tyler},
+title = {Imbalanced Graph Classification via Graph-of-Graph Neural Networks},
+year = {2022},
+series = {CIKM '22}
+}
+```
 
 The whole flowchart our model is visualized in the sequal.
-![](./img/framework_ggnn.png)
+![](./img/framework_g2gnn.png)
 
 We provide the motivation of graph of graphs via computing the homophily level of each constructed graph with different r-top similar graphs as direct neighborhoods. We can clearly see that edge homophily decreases as r increases because graphs with low topological similarity have higher chance to be selected as neighborhoods while they likely belong to different classes from corresponding center graphs. However, edge homophily even with r up to 5 is still [0.7, 0.8] and comparable to Citeseer dataset, indicating most edges in the constructed graphs connects graphs of the same class. Motivated by this observation, we perform GoG propagation on the generated kNN graph to aggregate neighboring graph information.
 
 
-![](./img/homolevel1.png)
+![](./img/kernelhomophily.png)
 
 ## Requirements
 * PyTorch 1.10.0+cu113
@@ -26,5 +36,3 @@ Note that the version of PyTorch and PyTorch Geometric should be compatible and 
 ```linux
 bash run_{dataset}.sh
 ```
-![](./img/Table_GoG1.png)
-![](./img/ablation_GoG.png)
