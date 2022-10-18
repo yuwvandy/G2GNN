@@ -5,10 +5,13 @@ See more details for the paper ['Imbalanced Graph Classification via Graph-of-Gr
 
 **If you use this code, please consider citing:**
 ```linux
-@inproceedings{10.1145/3511808.3557356,
+@inproceedings{wang2022imbalance,
 author = {Wang, Yu and Zhao, Yuying and Shah, Neil and Derr, Tyler},
 title = {Imbalanced Graph Classification via Graph-of-Graph Neural Networks},
 year = {2022},
+booktitle = {Proceedings of the 31st ACM International Conference on Information & Knowledge Management},
+pages = {2067–2076},
+numpages = {10},
 series = {CIKM '22}
 }
 ```
