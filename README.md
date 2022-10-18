@@ -13,25 +13,37 @@ series = {CIKM '22}
 }
 ```
 
-The whole flowchart our model is visualized in the sequal.
-![](./img/framework_g2gnn.png)
-
-We provide the motivation of graph of graphs via computing the homophily level of each constructed graph with different r-top similar graphs as direct neighborhoods. We can clearly see that edge homophily decreases as r increases because graphs with low topological similarity have higher chance to be selected as neighborhoods while they likely belong to different classes from corresponding center graphs. However, edge homophily even with r up to 5 is still [0.7, 0.8] and comparable to Citeseer dataset, indicating most edges in the constructed graphs connects graphs of the same class. Motivated by this observation, we perform GoG propagation on the generated kNN graph to aggregate neighboring graph information.
-
-
-![](./img/kernelhomophily.png)
-
 ## Requirements
-* PyTorch 1.10.0+cu113
-* PyTorch Geometric 2.0.2
-* Pytorch-scatter 2.0.9
-* NetworkX 2.6.3
-* Tqdm 4.62.3
-* Sklearn 1.0.1
+* PyTorch 1.11.0+cu113
+* PyTorch Geometric 2.0.4
+* torch-scatter 2.0.9
+* torch-sparse 0.6.15
+* torch-cluster 1.6.0
 
-Note that the version of PyTorch and PyTorch Geometric should be compatible and PyTorch Geometric is related to other packages, which requires to be installed beforehand. It is recommended to follow the [installation instruction](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#).
+Note that the **version of the PyTorch Geometric/scatter/sparse/cluster used here is not the latest 2.1.0**, which can be intalled via pip as follows:
+```
+pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
+pip install torch-geometric==2.0.4
+pip install torch-scatter -f https://data.pyg.org/whl/torch-1.11.0+cu113.html
+pip install torch-sparse -f https://data.pyg.org/whl/torch-1.11.0+cu113.html
+pip install torch-cluster -f https://data.pyg.org/whl/torch-1.11.0+cu113.html
+pip install torch-spline-conv -f https://data.pyg.org/whl/torch-1.11.0+cu113.html
+```
+
+## Implemented GNN models
+* [ICLR 2019] **GIN-How Powerful Are Graph Neural Networks?** [[paper]](https://arxiv.org/pdf/1810.00826.pdf)
+* [ICLR 2020] **InfoGraph-InfoGraph: Unsupervised and Semi-supervised Graph-Level Representation Learning via Mutual Information Maximization** [[paper]](https://arxiv.org/abs/1908.01000)
+* [Neurips 2020] **GraphCL-Graph Contrastive Learning with Augmentations** [[paper]](https://arxiv.org/abs/2010.13902)
+
+## Implemented strategies for handling imbalance issue in graph classification
+* [ICLR 2019] **GIN-How Powerful Are Graph Neural Networks?** [[paper]](https://arxiv.org/pdf/1810.00826.pdf)
+* [ICLR 2020] **InfoGraph-InfoGraph: Unsupervised and Semi-supervised Graph-Level Representation Learning via Mutual Information Maximization** [[paper]](https://arxiv.org/abs/1908.01000)
+* [Neurips 2020] **GraphCL-Graph Contrastive Learning with Augmentations** [[paper]](https://arxiv.org/abs/2010.13902)
+
 
 ## Run
+
+
 * To reproduce the performance comparison and the ablation study in the following Table and the Figure, run
 ```linux
 bash run_{dataset}.sh
