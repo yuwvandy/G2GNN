@@ -32,8 +32,8 @@ pip install torch-spline-conv -f https://data.pyg.org/whl/torch-1.11.0+cu113.htm
 
 ## Implemented GNN models
 * [ICLR 2019] **GIN-How Powerful Are Graph Neural Networks?** [[paper]](https://arxiv.org/pdf/1810.00826.pdf)
-* [ICLR 2020] **InfoGraph-InfoGraph: Unsupervised and Semi-supervised Graph-Level Representation Learning via Mutual Information Maximization** [[paper]](https://arxiv.org/abs/1908.01000)
-* [Neurips 2020] **GraphCL-Graph Contrastive Learning with Augmentations** [[paper]](https://arxiv.org/abs/2010.13902)
+* [ICLR 2020] **InfoGraph-InfoGraph: Unsupervised and Semi-supervised Graph-Level Representation Learning via Mutual Information Maximization** [[paper]](https://arxiv.org/abs/1908.01000) - incoming soon!
+* [Neurips 2020] **GraphCL-Graph Contrastive Learning with Augmentations** [[paper]](https://arxiv.org/abs/2010.13902) - incoming soon!
 
 ## Implemented strategies for handling imbalance issue in graph classification
 * [ICML 1997] **Upsampling: Addressing the curse of imbalanced training sets: one-sided selection** [[paper]](https://sci2s.ugr.es/keel/pdf/algorithm/congreso/kubat97addressing.pdf)
