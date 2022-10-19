@@ -32,4 +32,4 @@ python main.py --dataset='PROTEINS' --imb_ratio=0.9 --setting='aug' --num_train=
 
 
 echo "--knn_aug_drop_edge--"
-python main.py --dataset='PROTEINS' --imb_ratio=0.9 --setting='knn_aug' --num_train=300 --num_val=300 --epochs=1000 --weight_decay=0.1 --knn_layer=1 --knn_nei_num=2 --drop_edge_ratio=0.005
+python main.py --dataset='PROTEINS' --imb_ratio=0.9 --setting='knn_aug' --num_train=300 --num_val=300 --epochs=1000 --weight_decay=0.1 --knn_layer=2 --knn_nei_num=2 --drop_edge_ratio=0.005
