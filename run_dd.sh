@@ -38,4 +38,4 @@ python main.py --dataset='DD' --imb_ratio=0.1 --setting='knn_aug' --num_train=30
 
 
 echo "--knn_aug_mask_node--"
-python main.py --dataset='DD' --imb_ratio=0.1 --setting='knn_aug' --num_train=300 --num_val=300 --epochs=1000 --weight_decay=0.1 --knn_layer=1 --knn_nei_num=2  --mask_node_ratio=0
+python main.py --dataset='DD' --imb_ratio=0.1 --setting='knn_aug' --num_train=300 --num_val=300 --epochs=1000 --weight_decay=0.1 --knn_layer=2 --knn_nei_num=2  --mask_node_ratio=0.01
