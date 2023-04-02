@@ -4,7 +4,7 @@ import torch
 import scipy.sparse as sp
 from torch import nn
 from torch_geometric.utils import add_remaining_self_loops, degree
-from torch_scatter import scatter_max, scatter_add
+from torch_scatter import scatter_max, scatter_add, scatter
 import os
 
 from grakel.datasets import fetch_dataset
@@ -179,3 +179,16 @@ def embed_smote(embed, num_training_graph, y, k):
         return embed, y
 
     return torch.stack(embed_aug), torch.stack(y_aug).to(embed.device)
+
+
+def homophily(edge_index, y):
+    degree_cal = degree(edge_index[1], num_nodes=y.size(0))
+
+    edge_homo = (y[edge_index[0]] == y[edge_index[1]]
+                 ).sum().item() / edge_index.size(1)
+
+    tmp = y[edge_index[0]] == y[edge_index[1]]
+    node_homo = scatter(tmp, edge_index[1], dim=0, dim_size=y.size(
+        0), reduce='add') / degree_cal
+
+    return edge_homo, node_homo.mean()
