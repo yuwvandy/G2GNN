@@ -208,7 +208,7 @@ def get_TUDataset(dataset, pre_transform):
     for i in range(len(dataset)):
         mapping[dataset[i].id.item()] = i
 
-    return dataset, n_feat, n_class
+    return dataset, n_feat, n_class, mapping
 
 
 def shuffle(dataset, c_train_num, c_val_num, y):
